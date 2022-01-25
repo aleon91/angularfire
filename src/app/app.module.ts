@@ -12,7 +12,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { MainComponent } from './pages/main/main.component';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AuthGuard } from '@angular/fire/auth-guard'
 
 @NgModule({
   declarations: [
@@ -29,9 +28,7 @@ import { AuthGuard } from '@angular/fire/auth-guard'
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth())
   ],
-  providers: [
-    AuthGuard
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
